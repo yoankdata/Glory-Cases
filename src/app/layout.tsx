@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { TextMarquee } from "@/components/ui/TextMarquee";
+import { SmoothScroll } from "@/components/ui/SmoothScroll";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -32,14 +33,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="scroll-smooth">
+    <html lang="fr">
       <body
         className={`${playfair.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col bg-brand-canvas text-text-main`}
       >
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <TextMarquee />
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <TextMarquee />
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

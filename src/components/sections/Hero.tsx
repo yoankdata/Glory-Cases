@@ -1,69 +1,77 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
+import { MagneticButton } from "@/components/ui/MagneticButton";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export function Hero() {
+    const containerRef = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end start"],
+    });
+
+    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+    const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
     return (
-        <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-brand-canvas">
-            <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-6 py-12 md:grid-cols-2 md:px-12 lg:px-24">
-                {/* Left: Content */}
-                <motion.div
-                    className="relative z-20 space-y-6"
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <p className="font-sans text-sm font-bold uppercase tracking-widest text-brand-primary">
-                        Fait main à Abidjan
-                    </p>
+        <section
+            ref={containerRef}
+            className="relative h-screen w-full overflow-hidden bg-brand-secondary"
+        >
+            {/* Parallax Background Image */}
+            <motion.div
+                className="absolute inset-0 z-0"
+                style={{ y: backgroundY }}
+            >
+                <Image
+                    src="/images/hero-placeholder.jpg"
+                    alt="Glory Cases - Étui à lunettes premium"
+                    fill
+                    className="object-cover opacity-80"
+                    priority
+                />
+                <div className="absolute inset-0 bg-black/30" />
+            </motion.div>
 
-                    <h1 className="text-balance font-serif text-5xl font-medium leading-[0.95] tracking-tight text-brand-secondary md:text-7xl lg:text-8xl">
-                        L'Écrin de votre Regard.
-                    </h1>
+            {/* Content Layer */}
+            <motion.div
+                className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center"
+                style={{ y: textY, opacity: textOpacity }}
+            >
+                <p className="mb-4 font-sans text-sm font-bold uppercase tracking-[0.2em] text-white/80">
+                    Fait main à Abidjan
+                </p>
 
-                    <p className="max-w-md text-lg leading-relaxed text-gray-600 md:text-xl">
-                        L'alliance parfaite entre l'artisanat ivoirien et le design moderne.
-                    </p>
+                <h1 className="mb-8 text-balance font-serif text-6xl font-medium leading-none text-white mix-blend-overlay md:text-8xl lg:text-9xl">
+                    L'Écrin de<br />votre Regard.
+                </h1>
 
-                    <div className="pt-4">
-                        <Link href="/collection">
-                            <Button size="lg">Découvrir la Collection</Button>
-                        </Link>
-                    </div>
-                </motion.div>
+                <p className="mb-12 max-w-lg text-lg text-white/90 md:text-xl">
+                    L'alliance parfaite entre l'artisanat ivoirien et le design moderne.
+                </p>
 
-                {/* Right: Image with organic shape */}
-                <motion.div
-                    className="relative z-10 md:-ml-12"
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2, ease: "easeOut" }}
-                >
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-tl-[100px] rounded-br-[100px] shadow-2xl">
-                        {/* Glow effect */}
-                        <div className="absolute -inset-4 -z-10 bg-gradient-to-br from-brand-primary/20 via-brand-accent/10 to-brand-secondary/20 blur-3xl" />
+                <Link href="/collection">
+                    <MagneticButton>
+                        <Button size="lg" className="bg-white text-brand-secondary hover:bg-gray-100 border-none">
+                            Découvrir la Collection
+                        </Button>
+                    </MagneticButton>
+                </Link>
+            </motion.div>
 
-                        {/* Image */}
-                        <Image
-                            src="/images/hero-placeholder.jpg"
-                            alt="Glory Cases - Étui à lunettes premium"
-                            fill
-                            className="object-cover"
-                            priority
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-
-                        {/* Overlay gradient for depth */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-                    </div>
-                </motion.div>
-            </div>
-
-            {/* Decorative element - Abstract shape */}
-            <div className="pointer-events-none absolute right-0 top-1/4 -z-10 h-96 w-96 rounded-full bg-brand-accent/5 blur-3xl" />
+            {/* Scroll Indicator */}
+            <motion.div
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+            >
+                <div className="h-16 w-[1px] bg-gradient-to-b from-transparent via-white to-transparent" />
+            </motion.div>
         </section>
     );
 }
