@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
@@ -121,7 +121,7 @@ function HeroManifesto() {
     const sentence = "Dans le silence de l'atelier, chaque geste compte. Nous ne fabriquons pas seulement des étuis, nous façonnons des héritages.";
     const words = sentence.split(" ");
 
-    const container = {
+    const container: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -129,7 +129,7 @@ function HeroManifesto() {
         },
     };
 
-    const child = {
+    const child: Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,

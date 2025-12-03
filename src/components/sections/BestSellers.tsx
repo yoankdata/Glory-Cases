@@ -2,13 +2,13 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { ProductCard } from "@/components/business/ProductCard";
 import { PRODUCTS } from "@/lib/products";
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -19,7 +19,7 @@ const containerVariants = {
     },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 60 },
     visible: {
         opacity: 1,
