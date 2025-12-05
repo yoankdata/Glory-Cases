@@ -6,7 +6,7 @@ import { WhatsAppFloater } from "@/components/business/WhatsAppFloater";
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-0">
+    <div className="flex flex-col w-full overflow-x-hidden">
       <Hero />
       <BestSellers />
       <Craftsmanship />

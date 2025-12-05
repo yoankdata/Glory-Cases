@@ -38,8 +38,8 @@ export function Navbar() {
         <>
             <nav
                 className={`sticky top-0 z-40 w-full border-b transition-all duration-500 ${isScrolled
-                        ? "border-gray-200/50 bg-white/70 backdrop-blur-xl shadow-sm"
-                        : "border-transparent bg-transparent"
+                    ? "border-gray-200/50 bg-white/70 backdrop-blur-xl shadow-sm"
+                    : "border-transparent bg-transparent"
                     }`}
             >
                 <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export function Navbar() {
                     <div className="flex md:hidden">
                         <button
                             type="button"
-                            className="text-brand-secondary hover:text-brand-primary"
+                            className="text-brand-primary hover:text-brand-secondary"
                             onClick={() => setIsMenuOpen(true)}
                         >
                             <Menu className="h-6 w-6" />
@@ -59,7 +59,7 @@ export function Navbar() {
                     <div className="flex flex-1 justify-center md:justify-start">
                         <Link
                             href="/"
-                            className="font-serif text-2xl font-bold text-brand-secondary"
+                            className="font-serif text-2xl font-bold text-brand-primary"
                         >
                             GLORY CASES
                         </Link>
@@ -71,7 +71,7 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors"
+                                className="text-sm font-medium text-brand-primary hover:text-brand-secondary transition-colors"
                             >
                                 {link.label}
                             </Link>
@@ -82,10 +82,10 @@ export function Navbar() {
                     <div className="flex justify-end md:flex-1">
                         <button className="group -m-2 flex items-center p-2">
                             <ShoppingBag
-                                className="h-6 w-6 flex-shrink-0 text-brand-secondary group-hover:text-brand-primary"
+                                className="h-6 w-6 flex-shrink-0 text-brand-primary group-hover:text-brand-secondary"
                                 aria-hidden="true"
                             />
-                            <span className="ml-2 text-sm font-medium text-brand-secondary group-hover:text-brand-primary">
+                            <span className="ml-2 text-sm font-medium text-brand-primary group-hover:text-brand-secondary">
                                 0
                             </span>
                             <span className="sr-only">items in cart, view bag</span>
@@ -105,7 +105,7 @@ export function Navbar() {
                             duration: 0.5,
                             ease: [0.76, 0, 0.24, 1], // Custom Bézier curve
                         }}
-                        className="fixed inset-0 z-50 bg-brand-secondary md:hidden"
+                        className="fixed inset-0 z-50 bg-brand-primary md:hidden"
                     >
                         {/* Close Button */}
                         <button

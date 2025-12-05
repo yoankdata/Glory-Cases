@@ -46,17 +46,26 @@ function CraftBlock({
         >
             {/* Image Section avec Masque de Reveal */}
             <div className="relative w-full lg:w-1/2">
+                {/* Numéro Décoratif en Arrière-plan */}
+                <span className={cn(
+                    "absolute -top-16 z-0 font-serif text-[120px] leading-none font-bold text-brand-primary/10 select-none hidden lg:block",
+                    isReversed ? "-right-12" : "-left-12"
+                )}>
+                    0{index}
+                </span>
+
                 <motion.div
-                    className="relative aspect-[4/5] overflow-hidden rounded-card lg:aspect-[5/4]"
-                    initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }} // Masque part du bas
-                    whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }} // Dévoilement vers le haut
-                    transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }} // Courbe de vitesse lente
+                    className="relative z-10 overflow-hidden rounded-card"
+                    style={{ aspectRatio: "4/5" }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
                     viewport={{ once: true, amount: 0.2 }}
                 >
                     {/* Conteneur animé pour la parallaxe */}
                     <motion.div
-                        style={{ y, scale }}
-                        className="absolute inset-0 h-[130%] w-full -top-[15%]"
+                        style={{ y, scale, height: "130%", top: "-15%" }}
+                        className="absolute inset-0 w-full"
                     >
                         <Image
                             src={imageSrc}
@@ -67,14 +76,6 @@ function CraftBlock({
                         />
                     </motion.div>
                 </motion.div>
-
-                {/* Numéro Décoratif en Arrière-plan */}
-                <span className={cn(
-                    "absolute -top-16 -z-10 font-serif text-[120px] leading-none font-bold text-brand-primary/10 select-none hidden lg:block",
-                    isReversed ? "-right-12" : "-left-12"
-                )}>
-                    0{index}
-                </span>
             </div>
 
             {/* Text Section */}

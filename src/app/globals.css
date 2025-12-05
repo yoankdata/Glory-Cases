@@ -4,16 +4,24 @@
   /* Colors */
   --color-brand-canvas: #FAF9F6;
   --color-brand-primary: #C06C54;
-  --color-brand-secondary: #2c3e50;
+  --color-brand-secondary: #2C3E50;
   --color-brand-accent: #d4af37;
   --color-text-main: #333333;
 
   /* Fonts */
-  --font-serif: var(--font-playfair), serif;
-  --font-sans: var(--font-montserrat), sans-serif;
+  --font-serif: var(--font-montserrat), serif;
+  --font-ui: var(--font-poppins), sans-serif;
+  --font-sans: var(--font-lato), sans-serif;
+
+  /* Shadows - Premium Soft Shadows */
+  --shadow-premium: 0 20px 40px -10px rgba(44, 62, 80, 0.1);
+  --shadow-colored: 0 20px 40px -10px rgba(192, 108, 84, 0.2);
 
   /* Animations */
-  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 0.8s var(--ease-out-expo) forwards;
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /* Keyframes */
@@ -22,6 +30,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -32,7 +41,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    overscroll-behavior-y: none; /* Prevent elastic scroll on iOS */
+    overscroll-behavior-y: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
@@ -40,6 +52,30 @@
     color: var(--color-text-main);
     font-family: var(--font-sans);
     overscroll-behavior-y: none;
+    line-height: 1.6;
+    /* Improved readability */
+  }
+
+  /* Premium Selection */
+  ::selection {
+    background-color: var(--color-brand-primary);
+    color: white;
+  }
+
+  /* Typography Utilities */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+    /* Tighter headings for editorial look */
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   /* Hide scrollbar but keep functionality */
