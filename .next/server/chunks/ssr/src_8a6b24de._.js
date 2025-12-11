@@ -592,8 +592,6 @@ function getProductsByMaterial(material) {
 "use strict";
 
 __turbopack_context__.s([
-    "CollectionFeed",
-    ()=>CollectionFeed,
     "default",
     ()=>CollectionPage
 ]);

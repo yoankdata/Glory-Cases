@@ -68,7 +68,7 @@ function ProductCard({ product }: { product: Product }) {
 
 type FilterType = 'all' | 'wax' | 'cuir' | 'raphia' | 'textile';
 
-export function CollectionFeed() {
+function CollectionFeed() {
     const [activeFilter, setActiveFilter] = useState<FilterType>('all');
 
     const filteredProducts = useMemo(() => {

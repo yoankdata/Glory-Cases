@@ -601,8 +601,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "use strict";
 
 __turbopack_context__.s([
-    "CollectionFeed",
-    ()=>CollectionFeed,
     "default",
     ()=>CollectionPage
 ]);
