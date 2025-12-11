@@ -19,11 +19,14 @@ export default function HomePage() {
             {/* ═══════════════════════════════════════════════════════════════════
            HERO SECTION - Centré & Minimaliste (Stable)
            ═══════════════════════════════════════════════════════════════════ */}
-            <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
+            {/* ═══════════════════════════════════════════════════════════════════
+           HERO SECTION - Centré & Minimaliste (Stable)
+           ═══════════════════════════════════════════════════════════════════ */}
+            <section className="relative min-h-screen flex flex-col items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
 
                 {/* Décoration d'arrière-plan subtile */}
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-terracotta/5 rounded-full blur-3xl opacity-50" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-terracotta/5 rounded-full blur-3xl opacity-50" />
                     <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl opacity-30" />
                 </div>
 
@@ -32,37 +35,37 @@ export default function HomePage() {
 
                     {/* En-tête Textuel */}
                     <div className="mb-12 animate-fade-up">
-                        <p className="font-mono text-sm uppercase tracking-[0.4em] text-terracotta mb-6">
+                        <p className="font-mono text-xs md:text-sm uppercase tracking-[0.4em] text-terracotta mb-6">
                             Artisanat d&apos;Abidjan
                         </p>
-                        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-petrol mb-8 leading-none">
+                        <h1 className="font-display text-5xl md:text-8xl lg:text-9xl text-petrol mb-8 leading-none">
                             Habillons<br />
                             <span className="text-gradient">votre regard</span>
                         </h1>
-                        <p className="font-light text-xl md:text-2xl text-petrol/60 max-w-2xl mx-auto mb-10 leading-relaxed">
+                        <p className="font-light text-lg md:text-2xl text-petrol/60 max-w-2xl mx-auto mb-10 leading-relaxed">
                             L&apos;élégance de l&apos;Afro-Minimalisme.
                             <span className="hidden md:inline"> Des étuis à lunettes uniques, façonnés à la main entre tradition et modernité.</span>
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <Link href="/collection" className="btn-gold min-w-[200px]">
+                            <Link href="/collection" className="btn-gold w-full sm:w-auto min-w-[200px]">
                                 Découvrir
                             </Link>
-                            <Link href="/atelier" className="btn-outline min-w-[200px]">
+                            <Link href="/atelier" className="btn-outline w-full sm:w-auto min-w-[200px]">
                                 Le Savoir-Faire
                             </Link>
                         </div>
                     </div>
 
                     {/* Image Hero Stable */}
-                    <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[2rem] overflow-hidden shadow-2xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
+                    <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
                         <Image
                             src="/images/hero-etui.jpg"
                             alt="Collection Glory Cases - Étui en Wax"
                             fill
                             className="object-cover"
                             priority
-                            sizes="90vw"
+                            sizes="(max-width: 768px) 100vw, 90vw"
                         />
                         {/* Overlay léger pour l'ambiance */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-petrol/20 to-transparent" />
@@ -74,7 +77,7 @@ export default function HomePage() {
             {/* ═══════════════════════════════════════════════════════════════════
           MANIFESTE - Texte révélé au scroll
           ═══════════════════════════════════════════════════════════════════ */}
-            <section className="min-h-screen flex items-center justify-center py-32 px-6">
+            <section className="min-h-screen flex items-center justify-center py-20 md:py-32 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight">
                         <span className="text-petrol">Nous ne fabriquons pas des étuis.</span>
@@ -91,17 +94,18 @@ export default function HomePage() {
                         l&apos;histoire de tout un continent.
                     </p>
 
-                    <div className="mt-12 flex items-center justify-center gap-12 font-mono text-sm">
+                    <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 font-mono text-sm">
                         <div className="text-center">
                             <p className="text-4xl font-display text-terracotta">100%</p>
                             <p className="text-petrol/60 uppercase tracking-wider">Fait Main</p>
                         </div>
-                        <div className="w-px h-16 bg-petrol/20" />
+                        {/* Divider: Horizontal on mobile, vertical on desktop */}
+                        <div className="w-16 h-px bg-petrol/10 md:w-px md:h-16" />
                         <div className="text-center">
                             <p className="text-4xl font-display text-terracotta">Abidjan</p>
                             <p className="text-petrol/60 uppercase tracking-wider">Côte d&apos;Ivoire</p>
                         </div>
-                        <div className="w-px h-16 bg-petrol/20" />
+                        <div className="w-16 h-px bg-petrol/10 md:w-px md:h-16" />
                         <div className="text-center">
                             <p className="text-4xl font-display text-terracotta">Unique</p>
                             <p className="text-petrol/60 uppercase tracking-wider">Chaque Pièce</p>
@@ -171,7 +175,7 @@ export default function HomePage() {
             {/* ═══════════════════════════════════════════════════════════════════
           SECTION MATIÈRES
           ═══════════════════════════════════════════════════════════════════ */}
-            <section className="py-32 px-6">
+            <section className="py-20 md:py-32 px-6">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <p className="font-mono text-sm uppercase tracking-[0.3em] text-terracotta mb-4">

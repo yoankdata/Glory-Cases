@@ -763,6 +763,14 @@ body {
   height: 100%;
 }
 
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-px {
+  height: 1px;
+}
+
 .min-h-\[80vh\] {
   min-height: 80vh;
 }
@@ -821,6 +829,10 @@ body {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-\[600px\] {
+  width: 600px;
 }
 
 .min-w-\[200px\] {
@@ -1131,6 +1143,10 @@ body {
   border-radius: .75rem;
 }
 
+.rounded-\[1\.5rem\] {
+  border-radius: 1.5rem;
+}
+
 .rounded-t-\[3rem\] {
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
@@ -1279,6 +1295,10 @@ body {
 
 .bg-white\/10 {
   background-color: rgba(255, 255, 255, .1);
+}
+
+.bg-petrol\/10 {
+  background-color: rgba(26, 43, 60, .1);
 }
 
 .bg-gradient-to-br {
@@ -1505,6 +1525,14 @@ body {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pt-28 {
+  padding-top: 7rem;
 }
 
 .text-center {
@@ -1994,6 +2022,10 @@ html.lenis, html.lenis body {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-auto {
+    width: auto;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2028,8 +2060,24 @@ html.lenis, html.lenis body {
     aspect-ratio: 21 / 9;
   }
 
+  .md\:h-\[800px\] {
+    height: 800px;
+  }
+
+  .md\:h-16 {
+    height: 4rem;
+  }
+
   .md\:w-\[350px\] {
     width: 350px;
+  }
+
+  .md\:w-\[800px\] {
+    width: 800px;
+  }
+
+  .md\:w-px {
+    width: 1px;
   }
 
   .md\:grid-cols-2 {
@@ -2052,9 +2100,22 @@ html.lenis, html.lenis body {
     gap: 1rem;
   }
 
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
+  .md\:rounded-\[2rem\] {
+    border-radius: 2rem;
+  }
+
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .md\:text-2xl {
@@ -2095,6 +2156,11 @@ html.lenis, html.lenis body {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
   }
 }
 
