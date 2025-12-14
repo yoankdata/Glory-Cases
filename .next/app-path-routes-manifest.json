@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/page": "/",
+  "/mentions-legales/page": "/mentions-legales",
+  "/cgv/page": "/cgv",
+  "/atelier/page": "/atelier",
+  "/pro/page": "/pro",
+  "/product/[slug]/page": "/product/[slug]",
+  "/collection/page": "/collection"
+}
