@@ -17,10 +17,7 @@ export default function HomePage() {
             <Navbar />
 
             {/* ═══════════════════════════════════════════════════════════════════
-           HERO SECTION - Centré & Minimaliste (Stable)
-           ═══════════════════════════════════════════════════════════════════ */}
-            {/* ═══════════════════════════════════════════════════════════════════
-           HERO SECTION - Centré & Minimaliste (Stable)
+           HERO SECTION - Centré & Minimaliste
            ═══════════════════════════════════════════════════════════════════ */}
             <section className="relative min-h-screen flex flex-col items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
 
@@ -58,7 +55,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Image Hero Stable */}
-                    <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
+                    <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700" style={{ animationDelay: '0.2s' }}>
                         <Image
                             src="/images/hero-etui.jpg"
                             alt="Collection Glory Cases - Étui en Wax"
@@ -146,6 +143,7 @@ export default function HomePage() {
                                         alt={product.title}
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        loading="lazy"
                                     />
                                     {/* Overlay au hover */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-petrol/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -194,6 +192,7 @@ export default function HomePage() {
                         {/* Wax */}
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                             <Image
+                                loading="lazy"
                                 src="/images/materials/wax.jpg"
                                 alt="Wax africain"
                                 fill
@@ -211,6 +210,7 @@ export default function HomePage() {
                         {/* Cuir */}
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                             <Image
+                                loading="lazy"
                                 src="/images/materials/cuir.jpg"
                                 alt="Cuir véritable"
                                 fill
@@ -228,6 +228,7 @@ export default function HomePage() {
                         {/* Raphia */}
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                             <Image
+                                loading="lazy"
                                 src="/images/materials/raphia.jpg"
                                 alt="Raphia naturel"
                                 fill
@@ -248,7 +249,7 @@ export default function HomePage() {
             {/* ═══════════════════════════════════════════════════════════════════
           ILS NOUS FONT CONFIANCE - Logos Partenaires
           ═══════════════════════════════════════════════════════════════════ */}
-            <section className="py-20 md:py-24 px-6 bg-sand-200">
+            <section className="py-20 md:py-24 px-6 bg-sand-300">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
                         <p className="font-mono text-sm uppercase tracking-[0.3em] text-terracotta mb-4">
@@ -263,6 +264,7 @@ export default function HomePage() {
                     <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100">
                             <Image
+                                loading="lazy"
                                 src="/images/partners/optic-bel-vue.jpg"
                                 alt="Optic Bel Vue - Partenaire Glory Cases"
                                 fill
@@ -271,6 +273,7 @@ export default function HomePage() {
                         </div>
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100">
                             <Image
+                                loading="lazy"
                                 src="/images/partners/select-optic.png"
                                 alt="Select Optic - Partenaire Glory Cases"
                                 fill

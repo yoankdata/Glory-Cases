@@ -26,6 +26,7 @@ function ProductCard({ product }: { product: Product }) {
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
                 />
 
                 {/* Overlay gradient au hover */}
@@ -50,7 +51,7 @@ function ProductCard({ product }: { product: Product }) {
                             {product.title}
                         </h3>
                     </div>
-                    <p className="font-mono text-gold font-bold">
+                    <p className="font-mono text-gold-700">
                         {formatPrice(product.price)}
                     </p>
                 </div>
@@ -158,7 +159,7 @@ function CollectionFeed() {
                             <p className="font-display text-2xl text-petrol/30">Aucune pièce disponible dans cette matière.</p>
                             <button
                                 onClick={() => setActiveFilter('all')}
-                                className="mt-4 text-terracotta underline hover:text-gold transition-colors font-mono text-sm"
+                                className="btn-gold btn-md"
                             >
                                 Voir toute la collection
                             </button>

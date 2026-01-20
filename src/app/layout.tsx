@@ -1,43 +1,41 @@
 import type { Metadata } from 'next'
-import SmoothScrolling from '@/components/layout/SmoothScrolling'
-import MagneticCursor from '@/components/ui/MagneticCursor'
+import { Inter, Playfair_Display, JetBrains_Mono } from 'next/font/google'
 import '@/styles/globals.css'
+import ClientProviders from '@/components/ClientProviders'
 
-// ═══════════════════════════════════════════════════════════════════════════
-// MÉTADONNÉES SEO GLOBALES - Glory Cases
-// ═══════════════════════════════════════════════════════════════════════════
+// Configuration des polices optimisées
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-sans',
+    display: 'swap',
+})
+
+const playfair = Playfair_Display({
+    subsets: ['latin'],
+    variable: '--font-display',
+    display: 'swap',
+})
+
+const jetbrains = JetBrains_Mono({
+    subsets: ['latin'],
+    variable: '--font-mono',
+    display: 'swap',
+})
+
 export const metadata: Metadata = {
     title: {
-        default: 'Glory Cases | Étuis à Lunettes Artisanaux d\'Abidjan',
         template: '%s | Glory Cases',
+        default: 'Glory Cases - Étuis à Lunettes Afro-Minimalistes',
     },
     description:
-        'Étuis à lunettes artisanaux faits main à Abidjan. Wax, Cuir, Raphia - L\'Afro-Minimalisme au service de votre regard.',
-    keywords: [
-        'étuis à lunettes',
-        'artisanat africain',
-        'Wax',
-        'Abidjan',
-        'Côte d\'Ivoire',
-        'fait main',
-        'mode éthique',
-        'accessoires premium',
-    ],
-    authors: [{ name: 'Glory Cases' }],
-    creator: 'Glory Cases',
+        "Découvrez l'élégance du Wax, du Cuir et du Raphia. Des étuis à lunettes uniques, faits main à Abidjan. Accessoires premium pour l'optique.",
     openGraph: {
-        type: 'website',
-        locale: 'fr_FR',
+        title: 'Glory Cases - L\'Art de l\'Étui Afro-Chic',
+        description: 'Étuis à lunettes premium en Wax, Cuir et Raphia. Fabrication artisanale ivoirienne.',
         url: 'https://glorycases.com',
         siteName: 'Glory Cases',
-        title: 'Glory Cases | Étuis à Lunettes Artisanaux d\'Abidjan',
-        description:
-            'L\'Afro-Minimalisme — Étuis à lunettes faits main avec des matières ivoiriennes d\'exception.',
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Glory Cases',
-        description: 'Étuis à lunettes artisanaux d\'Abidjan',
+        locale: 'fr_CI',
+        type: 'website',
     },
     robots: {
         index: true,
@@ -45,30 +43,17 @@ export const metadata: Metadata = {
     },
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// LAYOUT PRINCIPAL
-// ═══════════════════════════════════════════════════════════════════════════
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
-        <html lang="fr" className="scroll-smooth" suppressHydrationWarning>
-            {/* Chargement des fonts Google */}
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-                    rel="stylesheet"
-                />
-            </head>
-            <body className="antialiased font-sans text-petrol bg-sand selection:bg-gold selection:text-white overflow-x-hidden">
-                <SmoothScrolling>
-                    <MagneticCursor />
+        <html lang="fr" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
+            <body className="antialiased bg-sand text-petrol selection:bg-gold/30 selection:text-petrol">
+                <ClientProviders>
                     {children}
-                </SmoothScrolling>
+                </ClientProviders>
             </body>
         </html>
     )

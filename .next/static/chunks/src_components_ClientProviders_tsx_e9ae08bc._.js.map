@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/kba98/Documents/Projets/Glory-Cases-main/src/components/ClientProviders.tsx"],"sourcesContent":["'use client'\r\n\r\nimport dynamic from 'next/dynamic'\r\nimport { ReactNode } from 'react'\r\n\r\n// Dynamic imports pour composants lourds (optimisation mobile Abidjan)\r\nconst SmoothScrolling = dynamic(() => import('@/components/layout/SmoothScrolling'), {\r\n    ssr: false,\r\n})\r\n\r\nconst MagneticCursor = dynamic(() => import('@/components/ui/MagneticCursor'), {\r\n    ssr: false,\r\n})\r\n\r\nexport default function ClientProviders({ children }: { children: ReactNode }) {\r\n    return (\r\n        <SmoothScrolling>\r\n            <MagneticCursor />\r\n            {children}\r\n        </SmoothScrolling>\r\n    )\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;;;AAFA;;;AAKA,uEAAuE;AACvE,MAAM,kBAAkB,IAAA,6KAAO,EAAC;;;;;;IAC5B,KAAK;;KADH;AAIN,MAAM,iBAAiB,IAAA,6KAAO,EAAC;;;;;;IAC3B,KAAK;;MADH;AAIS,SAAS,gBAAgB,KAAqC;QAArC,EAAE,QAAQ,EAA2B,GAArC;IACpC,qBACI,6LAAC;;0BACG,6LAAC;;;;;YACA;;;;;;;AAGb;MAPwB","debugId":null}}]
+}

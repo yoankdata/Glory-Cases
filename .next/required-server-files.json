@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\kba98\\Documents\\Glory-Cases-main",
+    "outputFileTracingRoot": "C:\\Users\\kba98\\Documents\\Projets\\Glory-Cases-main",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -289,10 +289,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.js",
     "turbopack": {
-      "root": "C:\\Users\\kba98\\Documents\\Glory-Cases-main"
+      "root": "C:\\Users\\kba98\\Documents\\Projets\\Glory-Cases-main"
     }
   },
-  "appDir": "C:\\Users\\kba98\\Documents\\Glory-Cases-main",
+  "appDir": "C:\\Users\\kba98\\Documents\\Projets\\Glory-Cases-main",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

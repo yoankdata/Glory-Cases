@@ -70,6 +70,7 @@ export default function AtelierPage() {
 
                         <div className="relative aspect-square rounded-3xl overflow-hidden shadow-glass-xl">
                             <Image
+                                loading="lazy"
                                 src="/images/products/etui-wax-tribal.jpg"
                                 alt="Étui Glory Cases - Détail du travail artisanal"
                                 fill
@@ -165,6 +166,7 @@ export default function AtelierPage() {
                         {/* Wax */}
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md cursor-pointer">
                             <Image
+                                loading="lazy"
                                 src="/images/materials/wax.jpg"
                                 alt="Wax africain authentique"
                                 fill
@@ -182,6 +184,7 @@ export default function AtelierPage() {
                         {/* Cuir */}
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md cursor-pointer">
                             <Image
+                                loading="lazy"
                                 src="/images/materials/cuir.jpg"
                                 alt="Cuir véritable artisanal"
                                 fill
@@ -199,6 +202,7 @@ export default function AtelierPage() {
                         {/* Raphia */}
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md cursor-pointer">
                             <Image
+                                loading="lazy"
                                 src="/images/materials/raphia.jpg"
                                 alt="Raphia naturel tressé"
                                 fill

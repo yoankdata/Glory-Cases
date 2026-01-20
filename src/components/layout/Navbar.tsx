@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { WHATSAPP_URL } from '@/lib/constants'
 
 export default function Navbar() {
     const pathname = usePathname()
@@ -15,7 +16,7 @@ export default function Navbar() {
     `
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-12 bg-sand/80 backdrop-blur-md border-b border-petrol/5 transition-all duration-300">
+        <nav className="fixed top-0 left-0 right-0 z-nav px-6 py-4 md:px-12 bg-sand/80 backdrop-blur-md border-b border-petrol/5 transition-all duration-300">
             <div className="flex items-center justify-between">
                 {/* Logo */}
                 <Link
@@ -37,9 +38,9 @@ export default function Navbar() {
                         Espace Pro
                     </Link>
                     <Link
-                        href="https://wa.me/22507756297"
+                        href={WHATSAPP_URL}
                         target="_blank"
-                        className="btn-gold text-xs py-2 px-4"
+                        className="btn-gold btn-sm"
                     >
                         Commander
                     </Link>
@@ -57,19 +58,19 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* Mobile Menu Dropdown (Basic Implementation) */}
+            {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-sand border-b border-petrol/10 p-6 flex flex-col gap-4 shadow-xl animate-fade-in">
-                    <Link href="/" className={linkClasses('/')} onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="fixed inset-0 z-overlay bg-sand/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 animate-in fade-in duration-300 md:hidden">
+                    <Link href="/" className="font-display text-4xl text-petrol hover:text-terracotta transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                         Accueil
                     </Link>
-                    <Link href="/atelier" className={linkClasses('/atelier')} onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="/atelier" className="font-display text-4xl text-petrol hover:text-terracotta transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                         L&apos;Atelier
                     </Link>
-                    <Link href="/collection" className={linkClasses('/collection')} onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="/collection" className="font-display text-4xl text-petrol hover:text-terracotta transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                         Collection
                     </Link>
-                    <Link href="/pro" className={linkClasses('/pro')} onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="/pro" className="font-display text-4xl text-petrol hover:text-terracotta transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                         Espace Pro
                     </Link>
                 </div>

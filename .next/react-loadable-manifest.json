@@ -10,5 +10,20 @@
     "files": [
       "static/chunks/646.f342b7cffc01feb0.js"
     ]
+  },
+  "components\\ClientProviders.tsx -> @/components/layout/SmoothScrolling": {
+    "id": 2760,
+    "files": [
+      "static/css/da6512f5b0afe8ea.css",
+      "static/chunks/760.a9fb129f9bb31af6.js"
+    ]
+  },
+  "components\\ClientProviders.tsx -> @/components/ui/MagneticCursor": {
+    "id": 2977,
+    "files": [
+      "static/chunks/c15bf2b0-9bbc96655547c627.js",
+      "static/chunks/904-6ad50a388481cebe.js",
+      "static/chunks/977.0cae4a95975d81cd.js"
+    ]
   }
 }

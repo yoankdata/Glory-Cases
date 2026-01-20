@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/product/heritage-cowrie":{},"/product/geo-lagoon":{},"/product/kente-royal":{},"/product/bijoux-royaux":{},"/product/gravure-elite":{},"/product/midnight-prestige":{},"/product/bleu-marine-classique":{},"/product/bleu-azur":{},"/product/bleu-nuit":{},"/product/noir-essentiel":{},"/product/terra-signature":{},"/product/wax-abstrait":{},"/product/corail-solaire":{},"/product/wax-ombre":{},"/product/tribal-wax":{},"/product/bleu-ocean-double":{},"/product/denim-spirit":{},"/product/duo-textile":{},"/product/rouge-passion":{},"/product/cauri-naturel":{},"/product/naturel-cauri":{},"/product/geo-cauri":{},"/product/bijou-dor":{},"/product/gravure-signature":{},"/product/logo-grave":{},"/product/gravure-perso":{},"/product/gravure-premium":{}},"dynamicRoutes":{"/product/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/product/[slug]","routeRegex":"^\\/product\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"13384ac60d78cbe7a37cc509d7f102b8","previewModeSigningKey":"c1b1a7bfd8d2a3a846908d8ee966152c57af0887627b73ccb6aea45e9a7a2b3f","previewModeEncryptionKey":"061c87457b6274c01544e1f5c8d1f3b5d63630e462d6ddd633adb1be0e47650b"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "edf9a16c149ec779c040d0f14352f178",
+    "previewModeSigningKey": "4c7b0ebe471720155e025268e10653467eb5bc1354d3551626264e2c8521557e",
+    "previewModeEncryptionKey": "f34485997c68392107c3c84e1a9c280f7b0eb0f6f0a458c4db9ef511d8817d2b"
+  }
+}

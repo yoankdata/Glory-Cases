@@ -1,9 +1,5 @@
 {
-  "/atelier/page": "app/atelier/page.js",
-  "/cgv/page": "app/cgv/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/collection/page": "app/collection/page.js",
-  "/mentions-legales/page": "app/mentions-legales/page.js",
-  "/page": "app/page.js",
-  "/pro/page": "app/pro/page.js",
-  "/product/[slug]/page": "app/product/[slug]/page.js"
+  "/page": "app/page.js"
 }

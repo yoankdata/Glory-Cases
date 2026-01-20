@@ -69,12 +69,12 @@ const config: Config = {
             // TYPOGRAPHIE - Hiérarchie Radicale
             // ═══════════════════════════════════════════════════════════════════════
             fontFamily: {
-                // Titres Display - Serif élégante à fort contraste (Gambetta alternative: Playfair Display)
-                display: ['Playfair Display', 'Georgia', 'serif'],
-                // Navigation & Labels - Sans-Serif Monospace
-                mono: ['Geist Mono', 'JetBrains Mono', 'monospace'],
-                // Corps - Sans-Serif géométrique lisible
-                sans: ['Inter', 'system-ui', 'sans-serif'],
+                // Titres Display - Serif élégante à fort contraste (Playfair Display)
+                display: ['var(--font-display)', 'Playfair Display', 'serif'],
+                // Navigation & Labels - Sans-Serif Monospace (JetBrains Mono)
+                mono: ['var(--font-mono)', 'JetBrains Mono', 'monospace'],
+                // Corps - Sans-Serif géométrique lisible (Inter)
+                sans: ['var(--font-sans)', 'Inter', 'sans-serif'],
             },
             // ═══════════════════════════════════════════════════════════════════════
             // ANIMATIONS "LUXE DIGITAL"
@@ -139,9 +139,14 @@ const config: Config = {
                 '88': '22rem',
                 '128': '32rem',
             },
+            zIndex: {
+                'cursor': '9999',
+                'nav': '50',
+                'overlay': '40',
+            },
         },
     },
-    plugins: [],
+    plugins: [require('tailwindcss-animate')],
 }
 
 export default config

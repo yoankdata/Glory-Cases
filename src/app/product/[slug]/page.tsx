@@ -62,9 +62,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {/* ═══════════════════════════════════════════════════════════════════
           NAVIGATION
           ═══════════════════════════════════════════════════════════════════ */}
-            {/* ═══════════════════════════════════════════════════════════════════
-          NAVIGATION
-          ═══════════════════════════════════════════════════════════════════ */}
             <Navbar />
 
             {/* ═══════════════════════════════════════════════════════════════════
@@ -236,6 +233,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                                         alt={p.title}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-petrol/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white translate-y-full group-hover:translate-y-0 transition-transform">
@@ -256,7 +254,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 <div className="flex items-center justify-between gap-4">
                     <div>
                         <p className="font-display text-lg">{product.title}</p>
-                        <p className="font-mono text-terracotta">{formatPrice(product.price)}</p>
+                        <p className="font-mono text-gold-700">{formatPrice(product.price)}</p>
                     </div>
                     <Link
                         href={whatsappUrl}

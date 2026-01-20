@@ -1,4 +1,4 @@
-// File: C:\Users\kba98\Documents\Glory-Cases-main\src\app\collection\page.tsx
+// File: C:\Users\kba98\Documents\Projets\Glory-Cases-main\src\app\collection\page.tsx
 import * as entry from '../../../../src/app/collection/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -5,8 +5,8 @@
   "/page": "/",
   "/mentions-legales/page": "/mentions-legales",
   "/cgv/page": "/cgv",
+  "/product/[slug]/page": "/product/[slug]",
   "/atelier/page": "/atelier",
   "/pro/page": "/pro",
-  "/product/[slug]/page": "/product/[slug]",
   "/collection/page": "/collection"
 }

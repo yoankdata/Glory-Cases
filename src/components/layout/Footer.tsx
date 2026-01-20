@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { WHATSAPP_URL } from '@/lib/constants'
 
 export default function Footer() {
     return (
@@ -33,7 +34,7 @@ export default function Footer() {
                             <li>Abidjan, Côte d&apos;Ivoire</li>
                             <li>
                                 <a
-                                    href="https://wa.me/22507756297"
+                                    href={WHATSAPP_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="hover:text-terracotta transition-colors"
@@ -46,7 +47,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-16 pt-8 border-t border-petrol/5 flex flex-col md:flex-row justify-between items-center text-sm text-petrol/40">
-                    <p>© 2025 Blone. Tous droits réservés.</p>
+                    <p>© 2025 Glory Cases. Tous droits réservés.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link href="/mentions-legales" className="hover:text-petrol">Mentions Légales</Link>
                         <Link href="/cgv" className="hover:text-petrol">CGV</Link>

@@ -87,7 +87,7 @@
   }
 
   .btn-gold:hover {
-    @apply bg-gold-600;
+    @apply brightness-90;
     box-shadow: 0 8px 32px rgba(197, 160, 89, 0.4);
     transform: translateY(-2px);
   }
@@ -98,12 +98,20 @@
 
   /* Bouton secondaire - Outline élégant */
   .btn-outline {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-petrol text-petrol text-sm uppercase tracking-wider rounded-full bg-transparent transition-all duration-300 ease-out;
-    font-family: 'Geist Mono', 'JetBrains Mono', monospace;
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border border-petrol text-petrol font-mono uppercase tracking-wider transition-all duration-300 hover:bg-petrol hover:text-white;
   }
 
-  .btn-outline:hover {
-    @apply bg-petrol text-white;
+  /* Variantes de taille */
+  .btn-sm {
+    @apply px-5 py-2.5 text-xs;
+  }
+
+  .btn-md {
+    @apply px-8 py-3.5 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-10 py-5 text-base;
   }
 
   /* Texte avec dégradé premium */
@@ -127,36 +135,6 @@
   .aspect-product {
     aspect-ratio: 3/4;
   }
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   ANIMATIONS KEYFRAMES
-   ═══════════════════════════════════════════════════════════════════════════ */
-@keyframes shimmer {
-  0% {
-    background-position: 0% center;
-  }
-
-  100% {
-    background-position: 200% center;
-  }
-}
-
-/* Animation de révélation au scroll */
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.reveal {
-  animation: reveal 0.8s ease-out forwards;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════

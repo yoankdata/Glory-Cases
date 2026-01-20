@@ -66,7 +66,7 @@ export default function MagneticCursor() {
     }, [pathname]) // Re-run effect on path change to attach listeners to new page elements
 
     return (
-        <div className="pointer-events-none fixed top-0 left-0 z-[9999] hidden lg:block mix-blend-difference">
+        <div className="pointer-events-none fixed top-0 left-0 z-cursor hidden lg:block mix-blend-difference">
             <div ref={cursorRef} className="absolute w-2 h-2 bg-white rounded-full bg-blend-difference" />
             <div ref={followerRef} className="absolute w-8 h-8 border border-white/50 rounded-full bg-blend-difference transition-colors duration-300" />
         </div>

@@ -23,9 +23,6 @@ export default function ProPage() {
             {/* ═══════════════════════════════════════════════════════════════════
           NAVIGATION
           ═══════════════════════════════════════════════════════════════════ */}
-            {/* ═══════════════════════════════════════════════════════════════════
-          NAVIGATION
-          ═══════════════════════════════════════════════════════════════════ */}
             <Navbar />
 
             {/* ═══════════════════════════════════════════════════════════════════
@@ -123,6 +120,7 @@ export default function ProPage() {
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100">
                             <Image
+                                loading="lazy"
                                 src="/images/partners/optic-bel-vue.jpg"
                                 alt="Optic Bel Vue - Partenaire Glory Cases"
                                 fill
@@ -131,6 +129,7 @@ export default function ProPage() {
                         </div>
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100">
                             <Image
+                                loading="lazy"
                                 src="/images/partners/select-optic.png"
                                 alt="Select Optic - Partenaire Glory Cases"
                                 fill
