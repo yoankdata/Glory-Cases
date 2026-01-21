@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -121,7 +121,7 @@ export default function ProPage() {
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100">
                             <Image
                                 loading="lazy"
-                                src="/images/partners/optic-bel-vue.jpg"
+                                src="/images/partners/optic-bel-vue.webp"
                                 alt="Optic Bel Vue - Partenaire Glory Cases"
                                 fill
                                 className="object-contain"
@@ -130,7 +130,7 @@ export default function ProPage() {
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100">
                             <Image
                                 loading="lazy"
-                                src="/images/partners/select-optic.png"
+                                src="/images/partners/select-optic.webp"
                                 alt="Select Optic - Partenaire Glory Cases"
                                 fill
                                 className="object-contain"

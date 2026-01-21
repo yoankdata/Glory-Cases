@@ -57,8 +57,49 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         .filter((p) => p.material === product.material && p.id !== product.id)
         .slice(0, 3)
 
+    // Schema.org Product pour le SEO
+    const productSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: product.title,
+        description: product.description,
+        image: product.images[0],
+        brand: {
+            '@type': 'Brand',
+            name: 'Glory Cases',
+        },
+        offers: {
+            '@type': 'Offer',
+            price: product.price,
+            priceCurrency: 'XOF',
+            availability: 'https://schema.org/InStock',
+            url: `https://glorycases.com/product/${product.slug}`,
+            seller: {
+                '@type': 'Organization',
+                name: 'Glory Cases',
+            },
+        },
+        material: product.materialLabel,
+        category: 'Étuis à lunettes',
+        artisan: {
+            '@type': 'Organization',
+            name: 'Glory Cases',
+            address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Abidjan',
+                addressCountry: 'CI',
+            },
+        },
+    }
+
     return (
         <div className="min-h-screen">
+            {/* Schema.org JSON-LD pour le SEO */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+            />
+
             {/* ═══════════════════════════════════════════════════════════════════
           NAVIGATION
           ═══════════════════════════════════════════════════════════════════ */}

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -71,7 +71,7 @@ export default function AtelierPage() {
                         <div className="relative aspect-square rounded-3xl overflow-hidden shadow-glass-xl">
                             <Image
                                 loading="lazy"
-                                src="/images/products/etui-wax-tribal.jpg"
+                                src="/images/products/etui-wax-tribal.webp"
                                 alt="Étui Glory Cases - Détail du travail artisanal"
                                 fill
                                 className="object-cover"
@@ -167,7 +167,7 @@ export default function AtelierPage() {
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md cursor-pointer">
                             <Image
                                 loading="lazy"
-                                src="/images/materials/wax.jpg"
+                                src="/images/materials/wax.webp"
                                 alt="Wax africain authentique"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -185,7 +185,7 @@ export default function AtelierPage() {
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md cursor-pointer">
                             <Image
                                 loading="lazy"
-                                src="/images/materials/cuir.jpg"
+                                src="/images/materials/cuir.webp"
                                 alt="Cuir véritable artisanal"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -203,7 +203,7 @@ export default function AtelierPage() {
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md cursor-pointer">
                             <Image
                                 loading="lazy"
-                                src="/images/materials/raphia.jpg"
+                                src="/images/materials/raphia.webp"
                                 alt="Raphia naturel tressé"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"

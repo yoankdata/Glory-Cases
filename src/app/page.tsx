@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -57,7 +57,7 @@ export default function HomePage() {
                     {/* Image Hero Stable */}
                     <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700" style={{ animationDelay: '0.2s' }}>
                         <Image
-                            src="/images/hero-etui.jpg"
+                            src="/images/hero-etui.webp"
                             alt="Collection Glory Cases - Étui en Wax"
                             fill
                             className="object-cover"
@@ -193,7 +193,7 @@ export default function HomePage() {
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                             <Image
                                 loading="lazy"
-                                src="/images/materials/wax.jpg"
+                                src="/images/materials/wax.webp"
                                 alt="Wax africain"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -211,7 +211,7 @@ export default function HomePage() {
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                             <Image
                                 loading="lazy"
-                                src="/images/materials/cuir.jpg"
+                                src="/images/materials/cuir.webp"
                                 alt="Cuir véritable"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -229,7 +229,7 @@ export default function HomePage() {
                         <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                             <Image
                                 loading="lazy"
-                                src="/images/materials/raphia.jpg"
+                                src="/images/materials/raphia.webp"
                                 alt="Raphia naturel"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -265,7 +265,7 @@ export default function HomePage() {
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100">
                             <Image
                                 loading="lazy"
-                                src="/images/partners/optic-bel-vue.jpg"
+                                src="/images/partners/optic-bel-vue.webp"
                                 alt="Optic Bel Vue - Partenaire Glory Cases"
                                 fill
                                 className="object-contain"
@@ -274,7 +274,7 @@ export default function HomePage() {
                         <div className="relative w-40 h-24 md:w-48 md:h-28 grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100">
                             <Image
                                 loading="lazy"
-                                src="/images/partners/select-optic.png"
+                                src="/images/partners/select-optic.webp"
                                 alt="Select Optic - Partenaire Glory Cases"
                                 fill
                                 className="object-contain"

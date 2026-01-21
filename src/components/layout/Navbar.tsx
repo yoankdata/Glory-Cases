@@ -16,12 +16,13 @@ export default function Navbar() {
     `
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-nav px-6 py-4 md:px-12 bg-sand/80 backdrop-blur-md border-b border-petrol/5 transition-all duration-300">
-            <div className="flex items-center justify-between">
+        <nav className="fixed top-0 left-0 right-0 z-nav px-4 py-4 md:px-12 bg-sand/80 backdrop-blur-md border-b border-petrol/5 transition-all duration-300">
+            <div className="relative z-50 flex items-center justify-between">
                 {/* Logo */}
                 <Link
                     href="/"
                     className="font-display text-2xl md:text-3xl text-petrol hover:text-terracotta transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
                 >
                     Glory<span className="text-gold">.</span>
                 </Link>

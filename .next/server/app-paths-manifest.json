@@ -1,5 +1,12 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/collection/page": "app/collection/page.js",
-  "/page": "app/page.js"
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/page": "app/page.js",
+  "/atelier/page": "app/atelier/page.js",
+  "/mentions-legales/page": "app/mentions-legales/page.js",
+  "/cgv/page": "app/cgv/page.js",
+  "/pro/page": "app/pro/page.js",
+  "/product/[slug]/page": "app/product/[slug]/page.js",
+  "/collection/page": "app/collection/page.js"
 }
